@@ -17,4 +17,7 @@ npm install react-app-rewired customize-cra babel-plugin-import -d //-d只在开
     "test": "react-app-rewired test",
     "eject": "react-app-rewired eject"
   },
+
+  //配置装饰器npm install -d @babel/plugin-proposal-decorators
+  //也在config-overrides.js里配置
   
