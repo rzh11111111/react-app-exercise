@@ -29,7 +29,9 @@ class Child extends Component{
     }
 }
 
-export default class HocPage extends Component {
+@foo
+class HocPage extends Component {
+// export default class HocPage extends Component {
     render(){
         //普通方式调用高阶组件
         // const Foo=foo2(foo(Child))
@@ -42,3 +44,5 @@ export default class HocPage extends Component {
         )
     }
 }
+
+export default HocPage
