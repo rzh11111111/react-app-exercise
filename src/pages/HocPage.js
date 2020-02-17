@@ -1,6 +1,6 @@
 //hoc高阶组件
 import React,{Component} from 'react';
-
+import {Button} from 'antd';
 
 
 const foo = Cmp =>props=>{
@@ -40,6 +40,7 @@ class HocPage extends Component {
                 <h1>HocPage</h1>
                 {/* 装饰器方式调用高阶组件 */}
                 <Child/>
+                <Button type="primary">submit</Button>
             </div>
         )
     }
