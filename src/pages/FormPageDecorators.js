@@ -5,12 +5,12 @@ const FormItem=Form.Item
 class FormPageDecorators extends Component {
     submit=()=>{
         //antd封装的方法
-        const {getFieldsValue} = this.props.form
-        console.log('submie',getFieldsValue(),getFieldsValue("name"));
+        const {getFieldsValue,getFieldValue} = this.props.form
+        console.log('submie',getFieldsValue(),getFieldValue("name"));
     }
     render(){
         const {getFieldDecorator} = this.props.form
-        console.log(this.props)
+        // console.log(this.props)
         return (
             <div>
                 FormPage
@@ -21,7 +21,8 @@ class FormPageDecorators extends Component {
                         
                     </FormItem>
                     <FormItem label="密码">
-                        <Input type="password" prefix={<Icon type="lock"/>}/>
+                        {getFieldDecorator("password")(<Input type="password"  prefix={<Icon type="lock"/>}/>)}
+                        
                     </FormItem>
                     <FormItem >
                         <Button onClick={this.submit}>提交</Button>
