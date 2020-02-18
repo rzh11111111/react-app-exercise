@@ -4,16 +4,21 @@ const FormItem=Form.Item
 
 class FormPageDecorators extends Component {
     submit=()=>{
-        console.log('submie')
+        //antd封装的方法
+        const {getFieldsValue} = this.props.form
+        console.log('submie',getFieldsValue(),getFieldsValue("name"));
     }
     render(){
+        const {getFieldDecorator} = this.props.form
         console.log(this.props)
         return (
             <div>
                 FormPage
                 <Form>
                     <FormItem label="姓名">
-                        <Input prefix={<Icon type="user"/>}/>
+                        {/* 高阶组件 */}
+                        {getFieldDecorator("name")(<Input prefix={<Icon type="user"/>}/>)}
+                        
                     </FormItem>
                     <FormItem label="密码">
                         <Input type="password" prefix={<Icon type="lock"/>}/>
@@ -26,5 +31,5 @@ class FormPageDecorators extends Component {
         )
     }
 }
-
+        //装饰器
 export default Form.create()(FormPageDecorators);
