@@ -1,12 +1,12 @@
 import React from 'react';
 import './App.css';
-import FormPage from './pages/FormPage';
+import FormPageDecorators from './pages/FormPageDecorators';
 
 
 function App() {
   return (
     <div className="App">
-      <FormPage/>
+      <FormPageDecorators/>
     </div>
   );
 }
