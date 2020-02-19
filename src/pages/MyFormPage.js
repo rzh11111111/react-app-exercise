@@ -31,12 +31,29 @@ function kFormCreate(Cmp) {
         getFieldValue=(field)=>{
             return this.state[field]
         }
+        validateFields=(callback)=>{
+            const tem = {...this.state}
+            const err=[]
+            for(let i in this.options){
+                if(tem[i]===undefined){
+                    err.push({
+                        [i]:'error'
+                    })
+                }
+            }
+            if(err.length>0){
+                callback(err,tem)
+            }else{
+                callback(undefined,tem)
+            }
+        }
         render(){
             return (
                 <div className="border">
                     <Cmp {...this.props} getFieldDecorator={this.getFieldDecorator}
                     getFieldsValue={this.getFieldsValue}
                     getFieldValue={this.getFieldValue}
+                    validateFields={this.validateFields}
                     />
                     
                 </div>
@@ -44,11 +61,26 @@ function kFormCreate(Cmp) {
         }
     }
 }
+const nameRule = {
+    required:true,
+    message:'please input your name'
+}
 
+const passwordRule = {
+    required:true,
+    message:'please input your password'
+}
 class MyFormPage extends Component {
     submit =()=>{
-        const {getFieldsValue,getFieldValue} = this.props
-        console.log("submit",getFieldsValue(),getFieldValue("name"))
+        const {getFieldsValue,getFieldValue,validateFields} = this.props
+        validateFields((err,value)=>{
+            if(err){
+                console.log('err',err)
+            }else{
+                console.log("submit",value)
+            }
+        })
+        // console.log("submit",getFieldsValue(),getFieldValue("name"))
     }
     render(){
         const {getFieldDecorator} = this.props
@@ -58,14 +90,14 @@ class MyFormPage extends Component {
                 
                        
                         {
-                        getFieldDecorator('name')(
+                        getFieldDecorator('name',{rules:[nameRule]})(
                             <input type="text"/>
                         )
                         
                         }
 
                         {
-                        getFieldDecorator('password')(
+                        getFieldDecorator('password',{rules:[passwordRule]})(
                             <input type="password"/>
                         )
                         
