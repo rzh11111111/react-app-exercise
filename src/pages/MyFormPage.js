@@ -28,11 +28,15 @@ function kFormCreate(Cmp) {
         getFieldsValue=()=>{
             return {...this.state}
         }
+        getFieldValue=(field)=>{
+            return this.state[field]
+        }
         render(){
             return (
                 <div className="border">
                     <Cmp {...this.props} getFieldDecorator={this.getFieldDecorator}
                     getFieldsValue={this.getFieldsValue}
+                    getFieldValue={this.getFieldValue}
                     />
                     
                 </div>
@@ -43,8 +47,8 @@ function kFormCreate(Cmp) {
 
 class MyFormPage extends Component {
     submit =()=>{
-        const {getFieldsValue} = this.props
-        console.log("submit",getFieldsValue())
+        const {getFieldsValue,getFieldValue} = this.props
+        console.log("submit",getFieldsValue(),getFieldValue("name"))
     }
     render(){
         const {getFieldDecorator} = this.props
