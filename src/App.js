@@ -1,13 +1,13 @@
 import React from 'react';
-import './App.css';
-import MyFormPage from './pages/MyFormPage';
+import DialogPage from './pages/DialogPage';
+
 
 
 
 function App() {
   return (
     <div className="App">
-      <MyFormPage/>
+      <DialogPage/>
     </div>
   );
 }
