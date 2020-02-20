@@ -19,7 +19,7 @@ export default class DialogPage extends Component {
             <div>
                 DialogPage
                 <Button onClick={this.handleShowDialog}>dialog toggle</Button>
-                {showDialog &&<Dialog/>}
+                {showDialog &&<Dialog hideDialog={this.handleShowDialog}/>}
             </div>
         )
     }

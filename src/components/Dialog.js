@@ -17,6 +17,7 @@ export default class Dialog extends Component{
         return createPortal(
             <div className="dialog">
                 Dialog
+                <button onClick={this.props.hideDialog}>close</button>
             </div>,
             this.node
         )
