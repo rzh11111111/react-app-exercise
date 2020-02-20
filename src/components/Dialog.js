@@ -1,11 +1,20 @@
 import React , {Component} from 'react';
+//在最外层body里面创建dom，传送门
+import {createPortal} from 'react-dom';
 
 export default class Dialog extends Component{
+    constructor(props){
+        super(props)
+        const doc = window.document
+        this.node = doc.createElement('div')
+        doc.body.appendChild(this.node)
+    }
     render(){
-        return (
+        return createPortal(
             <div className="dialog">
                 Dialog
-            </div>
+            </div>,
+            this.node
         )
     }
 }
