@@ -18,6 +18,7 @@ export default class Dialog extends Component{
             <div className="dialog">
                 Dialog
                 <button onClick={this.props.hideDialog}>close</button>
+                {this.props.children}
             </div>,
             this.node
         )
