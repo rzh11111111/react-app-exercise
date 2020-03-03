@@ -1,5 +1,6 @@
 import React from 'react';
-import TreePage from './pages/TreePage';
+import CommentList from './pages/CommentList';
+
 
 
 
@@ -7,7 +8,7 @@ import TreePage from './pages/TreePage';
 function App() {
   return (
     <div className="App">
-     <TreePage/>
+    <CommentList/>
     </div>
   );
 }
