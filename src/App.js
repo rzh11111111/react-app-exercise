@@ -1,5 +1,5 @@
 import React from 'react';
-import DialogPage from './pages/DialogPage';
+import TreePage from './pages/TreePage';
 
 
 
@@ -7,7 +7,7 @@ import DialogPage from './pages/DialogPage';
 function App() {
   return (
     <div className="App">
-      <DialogPage/>
+     <TreePage/>
     </div>
   );
 }
