@@ -1,5 +1,5 @@
 import React from 'react';
-import CommentList from './pages/CommentList';
+import PureComponentPage from './pages/PureComponentPage';
 
 
 
@@ -8,7 +8,7 @@ import CommentList from './pages/CommentList';
 function App() {
   return (
     <div className="App">
-    <CommentList/>
+    <PureComponentPage/>
     </div>
   );
 }
