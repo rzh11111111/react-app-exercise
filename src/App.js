@@ -1,5 +1,6 @@
 import React from 'react';
 import PureComponentPage from './pages/PureComponentPage';
+import HomePage from './pages/HomePage';
 
 
 
@@ -8,7 +9,7 @@ import PureComponentPage from './pages/PureComponentPage';
 function App() {
   return (
     <div className="App">
-    <PureComponentPage/>
+    <HomePage/>
     </div>
   );
 }
