@@ -38,6 +38,7 @@ compose(
 )();
 
 function compose(...funcs) {
+  console.log(...funcs)
   const len = funcs.length;
   if (len === 0) {
     return arg => arg;
@@ -46,7 +47,10 @@ function compose(...funcs) {
     return funcs[0];
   }
   //reduce js方法，累加器，从左到右相加
-  return funcs.reduce((left, right) => (...args) => right(left(...args)));
+  return funcs.reduce((left, right) => (...args) => {
+    console.log(left,right)
+    return right(left(...args))
+  });
 }
 export default class HomePage extends Component {
   render() {
