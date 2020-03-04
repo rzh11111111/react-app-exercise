@@ -1,6 +1,6 @@
 import React from 'react';
-import PureComponentPage from './pages/PureComponentPage';
-import HomePage from './pages/HomePage';
+import ReduxPage from './pages/ReduxPage';
+
 
 
 
@@ -9,7 +9,7 @@ import HomePage from './pages/HomePage';
 function App() {
   return (
     <div className="App">
-    <HomePage/>
+    <ReduxPage/>
     </div>
   );
 }
