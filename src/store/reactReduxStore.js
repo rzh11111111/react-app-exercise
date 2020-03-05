@@ -5,6 +5,7 @@ import counterRedcuer from "./counterReducer";
 import counterRedcuer2 from "./counterReducer2";
 
 const store = createStore(
+  //模块化
   combineReducers({
     counter: counterRedcuer,
     counter2: counterRedcuer2,
