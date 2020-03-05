@@ -15,6 +15,7 @@ export default class ReduxPage extends Component {
     return (
       <div>
         <h1>ReduxPage</h1>
+        {/* getstate获取状态 */}
         <p>counter:{store.getState()}</p>
         <button onClick={() => store.dispatch({ type: "add" })}>add</button>
         <button onClick={() => store.dispatch({ type: "minus" })}>minus</button>
