@@ -1,5 +1,5 @@
 import React from 'react';
-import ReduxPage from './pages/ReduxPage';
+import ReactReduxPage from './pages/ReactReduxPage'
 
 
 
@@ -9,7 +9,7 @@ import ReduxPage from './pages/ReduxPage';
 function App() {
   return (
     <div className="App">
-    <ReduxPage/>
+    <ReactReduxPage/>
     </div>
   );
 }
