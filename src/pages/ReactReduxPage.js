@@ -18,8 +18,8 @@ class ReactReduxPage extends Component {
   }
 }
 
-export default connect(
-  //mapStateToProps
+export default connect( 
+  //mapStateToProps 
   state => {
     console.log("state", state);
     return { counter: state.counter };
