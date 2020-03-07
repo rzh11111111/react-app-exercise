@@ -17,7 +17,7 @@ class ReactReduxPage extends Component {
     );
   }
 }
-
+//高阶组件
 export default connect( 
   //mapStateToProps 
   state => {
