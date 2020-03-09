@@ -33,6 +33,7 @@ export function applyMiddleware(...middlewares) {
     };
     const chain = middlewares.map(mw => mw(midApi));
     const dispatch = compose(...chain)(store.dispatch);
+    //异步
     return {
       ...store,
       dispatch,
