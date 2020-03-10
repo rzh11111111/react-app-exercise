@@ -38,7 +38,7 @@ export default class RouterPage extends Component {
             <Link to={"/search/" + searchId}>搜索</Link>
           </nav>
           <Switch>
-           {/* 组件渲染出来 */}
+           {/* 组件渲染出来，exact精确匹配 */}
             <Route exact path="/" component={HomePage} />
             {/* <Route path="/user" component={UserPage} /> */}
             <PrivateRoute path="/user" component={UserPage} />
