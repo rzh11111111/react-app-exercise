@@ -21,6 +21,7 @@ function Search(props) {
     <div>
       <h1>Search:{id}</h1>
       <Link to="/search/detail">详情：{id}</Link>
+      {/* 路由嵌套 */}
       <Route path="/search/detail" component={Detail} />
     </div>
   );
