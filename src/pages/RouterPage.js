@@ -15,6 +15,7 @@ function Detail() {
 
 function Search(props) {
   console.log("props", props);
+  // 通过路由传过来的params
   const { id } = props.match.params;
   return (
     <div>
