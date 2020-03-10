@@ -37,6 +37,7 @@ export default class RouterPage extends Component {
             <Link to="/user">用户中心</Link>
             <Link to={"/search/" + searchId}>搜索</Link>
           </nav>
+          {/* 独占路由switch */}
           <Switch>
            {/* 组件渲染出来，exact精确匹配 */}
             <Route exact path="/" component={HomePage} />
