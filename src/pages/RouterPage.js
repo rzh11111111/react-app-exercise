@@ -33,6 +33,7 @@ export default class RouterPage extends Component {
         <h1>RouterPage</h1>
         <BrowserRouter>
           <nav>
+            {/* 显示的东西，相当于a标签 */}
             <Link to="/">首页</Link>
             <Link to="/user">用户中心</Link>
             <Link to={"/search/" + searchId}>搜索</Link>
