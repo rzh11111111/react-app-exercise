@@ -45,6 +45,7 @@ export default class RouterPage extends Component {
            {/* 组件渲染出来，exact精确匹配 */}
             <Route exact path="/" component={HomePage} />
             {/* <Route path="/user" component={UserPage} /> */}
+            {/* 判断登录的路由守卫 */}
             <PrivateRoute path="/user" component={UserPage} />
             <Route path="/search/:id" component={Search} />
             <Route path="/login" component={LoginPage} />
