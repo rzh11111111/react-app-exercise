@@ -28,7 +28,7 @@ class PrivateRoute extends Component {
     );
   }
 }
-
+//高阶组件
 export default connect(state => ({ isLogin: state.user.isLogin }))(
   PrivateRoute,
 );
