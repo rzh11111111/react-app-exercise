@@ -4,6 +4,7 @@ const initalLogin = {
   isLogin: false,
   name: null,
 };
+
 function loginReducer(state = { ...initalLogin }, action) {
   switch (action.type) {
     case "getUserInfo":
