@@ -19,6 +19,7 @@ function loginReducer(state = { ...initalLogin }, action) {
       return state;
   }
 }
+//多个module
 const store = createStore(
   combineReducers({
     user: loginReducer,
