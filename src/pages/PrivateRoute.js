@@ -29,6 +29,7 @@ class PrivateRoute extends Component {
   }
 }
 //高阶组件
+//connect吧store的state和react的props关联起来
 export default connect(state => ({ isLogin: state.user.isLogin }))(
   PrivateRoute,
 );
