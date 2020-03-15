@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Route, Redirect } from "react-router-dom";
 import { connect } from "react-redux";
-
+//路由守卫
 class PrivateRoute extends Component {
   render() {
     // isLogin来自props
