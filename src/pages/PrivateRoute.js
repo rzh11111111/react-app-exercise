@@ -16,6 +16,7 @@ class PrivateRoute extends Component {
             <Cmp {...props} />
           ) : (
             //如果没登录
+            // redirect把上一次的值记录下来
             <Redirect
               to={{
                 pathname: "/login",
