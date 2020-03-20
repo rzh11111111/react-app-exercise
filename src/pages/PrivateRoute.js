@@ -12,7 +12,7 @@ class PrivateRoute extends Component {
         {...rest}
         render={props => {
           return isLogin ? (
-            // 如果登录了的话
+            // 如果登录了的话进这边
             <Cmp {...props} />
           ) : (
             //如果没登录
